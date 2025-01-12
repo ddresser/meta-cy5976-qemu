@@ -1,0 +1,27 @@
+arch=arm
+baudrate=115200
+board=qemu-arm
+board_name=qemu-arm
+boot_targets=qfw usb scsi virtio nvme dhcp
+bootargs=root=/dev/vda2 console=ttyAMA0
+bootcmd=bootz 0x40200000 - 0x49000000
+bootdelay=2
+cpu=armv7
+ethaddr=52:54:00:12:34:02
+fdt_addr=0x40000000
+fdt_high=0xffffffff
+fdtcontroladdr=4e5e1ea0
+fileaddr=49000000
+filesize=1f85
+initrd_high=0xffffffff
+kernel_addr_r=0x40400000
+loadaddr=0x40200000
+loadaddr_dtb=0x49000000
+preboot=usb start
+pxefile_addr_r=0x40300000
+ramdisk_addr_r=0x44000000
+scriptaddr=0x40200000
+stderr=serial,vidconsole
+stdin=serial,usbkbd
+stdout=serial,vidconsole
+vendor=emulation

@@ -10,5 +10,7 @@ fatload virtio 0:1 ${loadaddr} zImage
 # Load device tree binary
 setenv loadaddr_dtb 0x49000000
 fatload virtio 0:1 ${loadaddr_dtb} qemu.dtb
+# save the environment
+saveenv
 # Boot the kernel
 bootz ${loadaddr} - ${loadaddr_dtb}
